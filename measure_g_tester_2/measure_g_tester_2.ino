@@ -14,7 +14,7 @@ void flash() {
   if (c % 2 == 1) {
     digitalWrite(SWITCH, HIGH); //switch to default
     digitalWrite(OPTO, LOW); //ballStarting
-    delay(100);
+    delay(10);
     digitalWrite(OPTO, HIGH);
   }
   else {
@@ -39,7 +39,7 @@ void setup() {
 
   digitalWrite(OPTO, HIGH);
   digitalWrite(SWITCH, HIGH);
-  MsTimer2::set(1000, flash); // 500ms period
+  MsTimer2::set(300, flash); // 500ms period
   MsTimer2::start();
 }
 
